@@ -1,0 +1,33 @@
+Console.WriteLine("Введите диапазон значений от 1 до n");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите количество попыток");
+int k = Convert.ToInt32(Console.ReadLine());
+
+Random x = new Random();
+int ran = x.Next(1,n+1);
+
+Console.WriteLine("Угадайте число");
+for (int i = 0; i < k; i++)
+{
+    int p = Convert.ToInt32(Console.ReadLine());
+    if (ran == p)
+    {
+        Console.WriteLine("Вы угадали!");
+        break;
+    }
+    else
+    {
+        if (ran > p & i < k-1)
+        {
+            Console.WriteLine("Ваше число меньше загаданного");
+        }
+        if (ran < p & i < k-1)
+        {
+            Console.WriteLine("Ваше число больше загаданного");
+        }
+        if (i == k-1)
+        {
+            Console.WriteLine("Попытки закончились");
+        }
+    }
+}
