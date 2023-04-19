@@ -1,0 +1,14 @@
+string a = Console.ReadLine();
+int b = Convert.ToInt32(Console.ReadLine());
+double c = Convert.ToInt32(Console.ReadLine());
+int y = Convert.ToInt32(c);
+if ((c % 4 == 0) & !((c % 100 == 0) & (c % 400 != 0)))
+{
+    Console.WriteLine("Количество дней в году - 366");
+}
+else
+{
+    Console.WriteLine("Количество дней в году - 365");
+}
+int kol = DateTime.DaysInMonth(y, b);
+Console.WriteLine($"Количество дней в месяце - {kol}");
