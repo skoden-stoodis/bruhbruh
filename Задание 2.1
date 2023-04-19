@@ -1,0 +1,54 @@
+//Программа 1
+double a = Convert.ToInt32(Console.ReadLine());
+double b = Convert.ToInt32(Console.ReadLine());
+double x = Convert.ToInt32(Console.ReadLine());
+
+double s = (Math.Pow(a, 2) - Math.Pow(b, 2)) / 4 * (Math.Tan(x/180*Math.PI));
+
+Console.WriteLine(s);
+Console.WriteLine(ang);
+
+//Программа 2
+double x = Convert.ToInt32(Console.ReadLine());
+double y = Convert.ToInt32(Console.ReadLine());
+double z = Convert.ToInt32(Console.ReadLine());
+
+if (x > y & x > z & x < (y + z))
+{
+    Console.WriteLine("Треугольник существует");
+}
+
+else if (y > x & y > z & y < (x + z))
+{
+    Console.WriteLine("Треугольник существует");
+}
+
+else if (z > y & z > x & z < (y + x))
+{
+    Console.WriteLine("Треугольник существует");
+}
+
+else
+{
+    Console.WriteLine("Треугольник не существует");
+}
+
+//Программа 3
+int n = Convert.ToInt32(Console.ReadLine());
+int [] a = new int[n];
+double s = 0;
+double p = 1;
+
+for (int i = 0; i < n; i++)
+{
+    a[i] = Convert.ToInt32(Console.ReadLine());
+}
+
+for (int i = 0;i < n; i++)
+{
+    s = s + a[i];
+    p = p * a[i];
+}
+
+Console.WriteLine(s);
+Console.WriteLine(p);
