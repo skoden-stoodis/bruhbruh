@@ -1,0 +1,43 @@
+int y = Convert.ToInt32(Console.ReadLine());
+DateTime dateTime = new DateTime(y,1,1);
+for  (int i = 1; i <13; i++)
+{
+    int kol = DateTime.DaysInMonth(y, i);
+    DateTime year = new DateTime(y, i, kol);
+    DayOfWeek day = year.DayOfWeek;
+    if (day == DayOfWeek.Monday)
+    {
+        DateOnly th = new DateOnly(y, i, kol - 4);
+        Console.WriteLine(th);
+    }
+    if (day == DayOfWeek.Tuesday)
+    {
+        DateOnly th = new DateOnly(y, i, kol - 5);
+        Console.WriteLine(th);
+    }
+    if (day == DayOfWeek.Wednesday)
+    {
+        DateOnly th = new DateOnly(y, i, kol - 6);
+        Console.WriteLine(th);
+    }
+    if (day == DayOfWeek.Thursday)
+    {
+        DateOnly th = new DateOnly(y, i, kol);
+        Console.WriteLine(th);
+    }
+    if (day == DayOfWeek.Friday)
+    {
+        DateOnly th = new DateOnly(y, i, kol - 1);
+        Console.WriteLine(th);
+    }
+    if (day == DayOfWeek.Saturday)
+    {
+        DateOnly th = new DateOnly(y, i, kol - 2);
+        Console.WriteLine(th);
+    }
+    if (day == DayOfWeek.Sunday)
+    {
+        DateOnly th = new DateOnly(y, i, kol - 3);
+        Console.WriteLine(th);
+    }
+}
